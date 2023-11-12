@@ -9,6 +9,8 @@ public class ButtonController : MonoBehaviour
     public Sprite pressedImage;
     public KeyCode keyToPress;
     
+    public AudioSource music;
+    
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,6 +26,18 @@ public class ButtonController : MonoBehaviour
         if(Input.GetKeyUp(keyToPress))
         {
             spriteRenderer.sprite = defaultImage;
+        }
+        
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            Time.timeScale = 3f;
+            music.pitch = 3f;
+        }
+        
+        if(Input.GetKeyUp(KeyCode.L))
+        {
+            Time.timeScale = 1f;
+            music.pitch = 1f;
         }
     }
 }
