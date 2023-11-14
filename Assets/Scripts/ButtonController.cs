@@ -30,8 +30,8 @@ public class ButtonController : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.L))
         {
-            Time.timeScale = 3f;
-            music.pitch = 3f;
+            Time.timeScale = 7f;
+            music.pitch = 7f;
         }
         
         if(Input.GetKeyUp(KeyCode.L))

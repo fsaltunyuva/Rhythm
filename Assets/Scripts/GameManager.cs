@@ -69,22 +69,28 @@ public class GameManager : MonoBehaviour
                 percentHitText.text = percentHit.ToString("F1") + "%";
                 
                 string rankVal = "F";
+                rankText.color = Color.red;
                 
                 if (percentHit > 40)
                 {
                     rankVal = "D";
+                    rankText.color = Color.red;
                     if (percentHit > 55)
                     {
                         rankVal = "C";
+                        rankText.color = new Color(1.0f, 0.64f, 0.0f);;
                         if (percentHit > 70)
                         {
                             rankVal = "B";
+                            rankText.color = Color.yellow;
                             if (percentHit > 85)
                             {
                                 rankVal = "A";
+                                rankText.color = Color.cyan;
                                 if (percentHit > 95)
                                 {
                                     rankVal = "S";
+                                    rankText.color = Color.green;
                                 }
                             }
                         }
